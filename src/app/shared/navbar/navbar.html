@@ -1,28 +1,42 @@
 <nav class="bg-white border-b fixed top-0 left-0 w-full z-50">
-   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-	   <div class="flex items-center justify-between h-20 sm:h-20 py-2 sm:py-4">
-			   <div class="flex items-center">
-				   <a href="#" class="flex items-center">
-					   <img src="APAC.png" alt="Logo" class="h-10 w-auto sm:h-12" />
-				   </a>
-			   </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20 py-2">
 
-			   <div class="hidden md:flex md:items-center md:space-x-10">
-				   <a (click)="navegar('inicio')" class="hover:cursor-pointer flex items-center text-base lg:text-lg text-gray-700 hover:text-teal-500 transition-all">
-					   <span class="inline-block w-2 h-2 bg-teal-400 rounded-full mr-2"></span>
-					   Inicio
-				   </a>
-				   <a (click)="navegar('nosotros')" class="hover:cursor-pointer text-base lg:text-lg text-gray-700 hover:text-teal-500 transition-all">Nosotros</a>
-				   <a (click)="navegar('servicios')" class="hover:cursor-pointer text-base lg:text-lg text-gray-700 hover:text-teal-500 transition-all">Servicios</a>
-			   </div>
+      <div class="flex items-center">
+        <a class="flex items-center">
+          <img src="APAC.png" alt="Logo" class="h-10 w-auto sm:h-12" />
+        </a>
+      </div>
 
-			   <div class="flex items-center space-x-4">
-				   <a (click)="navegar('contacto')" class="hover:cursor-pointer md:inline-block bg-teal-500 text-white px-6 py-2 rounded-lg text-base lg:text-lg font-semibold hover:bg-teal-600 transition">Contactanos</a>
+      <!-- Menú en desktop -->
+      <div class="hidden md:flex md:items-center md:space-x-10">
+        <a (click)="navegar2('inicio')"
+           class="hover:cursor-pointer text-gray-700 hover:text-teal-500 transition-all">Inicio</a>
+        <a (click)="navegar2('nosotros')"
+           class="hover:cursor-pointer text-gray-700 hover:text-teal-500 transition-all">Nosotros</a>
+        <a (click)="navegar2('servicios')"
+           class="hover:cursor-pointer text-gray-700 hover:text-teal-500 transition-all">Servicios</a>
+      </div>
 
-				   <button class="md:hidden inline-flex items-center justify-center p-3 rounded-md text-gray-700 hover:text-gray-900">
-					   <i class="fa-solid fa-bars text-xl"></i>
-				   </button>
-			   </div>
-		</div>
-	</div>
+      <div class="flex items-center space-x-4">
+        <a href="https://wa.me/51910897162?text=Hola,%20quiero%20información"
+           target="_blank"
+           class="bg-teal-500 text-white px-6 py-2 rounded-lg hover:bg-teal-600 transition">Contáctanos</a>
+
+        <button (click)="toggleMenu()"
+                class="md:hidden inline-flex items-center justify-center p-3 rounded-md text-gray-700 hover:text-gray-900">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Menú hamburguesa móvil -->
+    <div *ngIf="menuAbierto" class="md:hidden mt-2 bg-white border-t border-gray-200">
+      <a (click)="navegar2('inicio')" class="block px-4 py-2 text-gray-700 hover:bg-teal-100">Inicio</a>
+      <a (click)="navegar2('nosotros')" class="block px-4 py-2 text-gray-700 hover:bg-teal-100">Nosotros</a>
+      <a (click)="navegar2('servicios')" class="block px-4 py-2 text-gray-700 hover:bg-teal-100">Servicios</a>
+    </div>
+
+  </div>
 </nav>
