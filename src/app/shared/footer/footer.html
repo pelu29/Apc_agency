@@ -4,7 +4,7 @@
         <!-- Elementos decorativos de fondo sutil -->
         <div class="absolute top-0 right-0 w-96 h-96 bg-teal-500 opacity-10 rounded-full -mr-40 -mt-40"></div>
         <div class="absolute bottom-0 left-0 w-72 h-72 bg-teal-500 opacity-10 rounded-full -ml-32 -mb-32"></div>
-        
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                 <!-- Columna izquierda: Contacto -->
@@ -14,8 +14,8 @@
                             <i class="fa-solid fa-phone text-2xl text-gray-400 group-hover:text-white"></i>
                         </div>
                         <div>
-                            <div class="font-bold text-xl mb-2 tracking-wide">LLÁMANOS</div>
-                            <div class="text-sm text-gray-400">1 (234) 567-891, 1 (234) 987-654</div>
+                            <div class="geom-bold text-xl mb-2 tracking-wide">LLÁMANOS</div>
+                            <div class="geom-regular text-sm text-gray-400">1 (234) 567-891, 1 (234) 987-654</div>
                         </div>
                     </div>
                     <div class="flex items-start gap-6 group">
@@ -23,8 +23,9 @@
                             <i class="fa-solid fa-location-dot text-2xl text-gray-400 group-hover:text-white"></i>
                         </div>
                         <div>
-                            <div class="font-bold text-xl mb-2 tracking-wide">UBICACIÓN</div>
-                            <div class="text-sm text-gray-400">121 Rock Street, 21 Avenue, Nueva York, NY 92103-9000</div>
+                            <div class="geom-bold text-xl mb-2 tracking-wide">UBICACIÓN</div>
+                            <div class="text-sm text-gray-400 geom-regular">121 Rock Street, 21 Avenue, Nueva York, NY
+                                92103-9000</div>
                         </div>
                     </div>
                     <div class="flex items-start gap-6 group">
@@ -32,32 +33,46 @@
                             <i class="fa-solid fa-clock text-2xl text-gray-400 group-hover:text-white"></i>
                         </div>
                         <div>
-                            <div class="font-bold text-xl mb-2 tracking-wide">HORAS DE TRABAJO</div>
-                            <div class="text-sm text-gray-400">Lun - Vie ...... 10 am - 8 pm, Sáb, Dom ........ Cerrado</div>
+                            <div class="geom-bold text-xl mb-2 tracking-wide">HORAS DE TRABAJO</div>
+                            <div class="text-sm text-gray-400 geom-regular">Lun - Vie ...... 10 am - 8 pm, Sáb, Dom
+                                ........ Cerrado</div>
                         </div>
                     </div>
                 </div>
                 <!-- Columna derecha: Formulario -->
                 <div class="flex items-center justify-center md:justify-end">
-                    <form class="w-full max-w-md bg-gray-800 rounded-xl p-10 border border-gray-700 hover:border-teal-500 transition">
-                        <h3 class="text-3xl font-bold mb-1 text-white tracking-tight">CONTÁCTENOS</h3>
-                        <p class="text-gray-500 text-sm mb-8">Te responderemos lo antes posible</p>
-                        
+                    <form action="https://api.web3forms.com/submit" method="POST"
+                        class="w-full max-w-md bg-gray-800 rounded-xl p-10 border border-gray-700 hover:border-teal-500 transition">
+                        <!-- Importante -->
+                        <input type="hidden" name="access_key" value="2a0f2119-c242-4d58-b12d-52af6f532559">
+
+                        <!-- Opcional: evita spam -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+
+                        <h3 class="text-3xl geom-bold mb-1 text-white tracking-tight">CONTÁCTENOS</h3>
+                        <p class="text-gray-500 geom-regular text-sm mb-8">Te responderemos lo antes posible</p>
+
                         <div class="mb-8">
-                            <input type="text" placeholder="Nombre completo"
-                                class="w-full border-b border-gray-700 bg-transparent text-white py-3 px-0 focus:outline-none focus:border-teal-500 placeholder-gray-600 transition" />
+                            <input type="text" name="nombre" placeholder="Nombre completo" required
+                                class="w-full geom-regular border-b border-gray-700 bg-transparent text-white py-3 px-0 focus:outline-none focus:border-teal-500 placeholder-gray-600 transition" />
                         </div>
+
                         <div class="mb-8">
-                            <input type="email" placeholder="Correo electrónico"
-                                class="w-full border-b border-gray-700 bg-transparent text-white py-3 px-0 focus:outline-none focus:border-teal-500 placeholder-gray-600 transition" />
+                            <input type="email" name="email" placeholder="Correo electrónico" required
+                                class="w-full geom-regular border-b border-gray-700 bg-transparent text-white py-3 px-0 focus:outline-none focus:border-teal-500 placeholder-gray-600 transition" />
                         </div>
+
                         <div class="mb-8">
-                            <textarea rows="4" placeholder="Tu mensaje..."
-                                class="w-full border-b border-gray-700 bg-transparent text-white py-3 px-0 focus:outline-none focus:border-teal-500 placeholder-gray-600 resize-none transition"></textarea>
+                            <textarea rows="4" name="mensaje" placeholder="Tu mensaje..." required
+                                class="w-full border-b geom-regular border-gray-700 bg-transparent text-white py-3 px-0 focus:outline-none focus:border-teal-500 placeholder-gray-600 resize-none transition"></textarea>
                         </div>
+
                         <button type="submit"
-                            class="w-full bg-teal-500 hover:bg-teal-600 text-white py-2 font-bold rounded-lg transition duration-300">ENVIAR</button>
+                            class="w-full bg-teal-500 geom-bold hover:bg-teal-600 text-white py-2 rounded-lg transition duration-300">
+                            ENVIAR
+                        </button>
                     </form>
+
                 </div>
             </div>
         </div>
