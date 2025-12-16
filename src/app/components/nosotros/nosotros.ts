@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './nosotros.css',
 })
 export class Nosotros {
-
+  navegarSitioWeb(link: string): void {
+    window.open(link, '_blank');
+  }
 }

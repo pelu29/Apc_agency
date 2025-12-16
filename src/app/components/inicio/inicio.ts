@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './inicio.css',
 })
 export class Inicio {
-
+  navegarSitioWeb(link: string): void {
+    window.open(link, '_blank');
+  }
 }

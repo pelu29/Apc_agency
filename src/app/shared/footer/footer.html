@@ -15,7 +15,7 @@
                         </div>
                         <div>
                             <div class="geom-bold text-xl mb-2 tracking-wide">LLÁMANOS</div>
-                            <div class="geom-regular text-sm text-gray-400">1 (234) 567-891, 1 (234) 987-654</div>
+                            <div class="geom-regular text-sm text-gray-400">+51 910 897 162</div>
                         </div>
                     </div>
                     <div class="flex items-start gap-6 group">
@@ -24,8 +24,7 @@
                         </div>
                         <div>
                             <div class="geom-bold text-xl mb-2 tracking-wide">UBICACIÓN</div>
-                            <div class="text-sm text-gray-400 geom-regular">121 Rock Street, 21 Avenue, Nueva York, NY
-                                92103-9000</div>
+                            <div class="text-sm text-gray-400 geom-regular">Los Olivos, Lima - Perú</div>
                         </div>
                     </div>
                     <div class="flex items-start gap-6 group">
@@ -33,9 +32,8 @@
                             <i class="fa-solid fa-clock text-2xl text-gray-400 group-hover:text-white"></i>
                         </div>
                         <div>
-                            <div class="geom-bold text-xl mb-2 tracking-wide">HORAS DE TRABAJO</div>
-                            <div class="text-sm text-gray-400 geom-regular">Lun - Vie ...... 10 am - 8 pm, Sáb, Dom
-                                ........ Cerrado</div>
+                            <div class="geom-bold text-xl mb-2 tracking-wide">HORAS DE ATENCIÓN</div>
+                            <div class="text-sm text-gray-400 geom-regular">Lun a Dom - 10 am - 8 pm</div>
                         </div>
                     </div>
                 </div>
@@ -83,28 +81,26 @@
             <!-- Logo y descripción -->
             <div>
                 <img src="APAC.png" alt="" class="w-20">
-                <p class="text-gray-500 text-sm mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting
-                    industry.</p>
-                <div class="text-gray-400 text-sm">@Lorem</div>
+                <p class="text-gray-500 text-sm mb-4">Creamos software a medida y acompañamos a nuestros clientes en todo el proceso.</p>
+                <div class="text-gray-400 text-sm">@Apac</div>
             </div>
 
             <!-- About us -->
             <div>
-                <div class="font-semibold text-gray-800 mb-2">Nosotros</div>
+                <div class="geom-bold text-gray-800 mb-2">Nosotros</div>
                 <ul class="space-y-1 text-gray-500 text-sm">
-                    <li><a href="#" class="hover:text-blue-600 transition">Lorem</a></li>
-                    <li><a href="#" class="hover:text-blue-600 transition">Portfolio</a></li>
-                    <li><a href="#" class="hover:text-blue-600 transition">Careers</a></li>
-                    <li><a href="#" class="hover:text-blue-600 transition">Contact us</a></li>
+                    <li><a class="hover:cursor-pointer hover:text-blue-600 transition geom-regular" (click)="navegar('nosotros')">Misión</a></li>
+                    <li><a class="hover:cursor-pointer hover:text-blue-600 transition geom-regular" (click)="navegar('nosotros')">Visión</a></li>
+                    <li><a class="hover:cursor-pointer hover:text-blue-600 transition geom-regular" (click)="navegar('nosotros')">Proyectos</a></li>
+                    <li (click)="irAPlanes()"><a class="hover:cursor-pointer hover:text-blue-600 transition geom-regular" (click)="navegar('servicios')">Planes</a></li>
                 </ul>
             </div>
 
             <!-- Contact us y redes -->
             <div>
-                <div class="font-semibold text-gray-800 mb-2">Contacto</div>
-                <p class="text-gray-500 text-sm mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting
-                    industry.</p>
-                <div class="text-gray-500 text-sm mb-4">+908 89097 890</div>
+                <div class="geom-bold text-gray-800 mb-2">Contacto</div>
+                <p class="text-gray-500 text-sm mb-2 geom-regular">Escríbenos y te ayudamos a crear soluciones de software a medida para hacer crecer tu empresa.</p>
+                <div class="text-gray-500 text-sm mb-4 geom-regular">+51 910 897 162</div>
                 <div class="flex space-x-3 mt-2">
                     <a href="#"
                         class="bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-500 rounded-full p-2 shadow transition"><i
@@ -123,6 +119,6 @@
         </div>
     </div>
     <div class="border-t border-gray-200 mt-6">
-        <div class="text-center text-xs text-gray-400 py-4">Copyright © 2021 Lorem All rights reserved</div>
+        <div class="text-center text-xs text-gray-400 py-4 geom-regular">© 2025 APAC | Soluciones Digitales. Todos los derechos reservados.</div>
     </div>
 </footer>
